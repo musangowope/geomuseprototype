@@ -1,0 +1,188 @@
+.home-page-header {
+    position: relative;
+    overflow: hidden;
+}
+
+/*.home-page-header*/
+
+.home-page-header .home-navbar {
+    background-color: rgba(75, 51, 60, 0.78);
+}
+
+.home-page-header .header-section {
+    height: 100vh;
+    background-color: rebeccapurple;
+    position: relative;
+    margin-bottom: -56px;
+}
+
+.home-page-header .header-section .header-title {
+    padding: 20px;
+    background-color: rgba(169, 169, 169, 0.1);
+    margin: 20px;
+}
+
+.home-page-header .header-section .header-bg {
+    transition: 0.3s ease-in;
+}
+
+
+.home-page-header .header-section .tune-overlay {
+    height: 100%;
+    background-color: white;
+    width: 2px;
+    position: absolute;
+    top: 0;
+    left: 100px;
+    z-index: 1;
+    -webkit-animation: tune-motion 100s infinite;
+    animation: tune-motion 100s infinite;
+}
+
+
+
+
+.home-page-header .header-section .tune-overlay .tune-number {
+    padding: 30px;
+}
+
+@-webkit-keyframes tune-motion
+{
+    from {
+        left: 0;
+    }
+    to {
+        left: 80%;
+    }
+}
+@keyframes tune-motion
+{
+    from {
+        left: 0;
+    }
+    to {
+        left: 80%;
+    }
+}
+
+
+.home-page-header .header-section .tune-overlay .tune-pulse {
+    box-shadow: 2px 2px 30px rgba(255, 255, 255, 0.51);
+    height: 100%;
+    -webkit-animation: tune-pulse 1.5s infinite cubic-bezier(0.66, 0, 0, 1);
+    -moz-animation: tune-pulse 1.5s infinite cubic-bezier(0.66, 0, 0, 1);
+    -ms-animation: tune-pulse 1.5s infinite cubic-bezier(0.66, 0, 0, 1);
+    animation: tune-pulse 1.5s infinite cubic-bezier(0.66, 0, 0, 1);
+}
+
+@-webkit-keyframes tune-pulse {to {box-shadow: 0 0 0 13px rgba(232, 76, 61, 0);}}
+@-moz-keyframes tune-pulse {to {box-shadow: 0 0 0 13px rgba(232, 76, 61, 0);}}
+@-ms-keyframes tune-pulse {to {box-shadow: 0 0 0 13px rgba(232, 76, 61, 0);}}
+@keyframes tune-pulse {to {box-shadow: 0 0 0 13px rgba(232, 76, 61, 0);}}
+
+
+
+
+
+
+.home-page-header .header-section .bg-position {
+    /*position: absolute;*/
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.home-page-header .header-section .bg-position .bg-container {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+}
+
+.home-page-header .header-section .bg-position .bg-container .bg{
+    flex: 1;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    margin-top: -56px;
+}
+
+.home-page-header .header-section .header-content {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*background-color: red;*/
+    display: flex;
+    align-items: center;
+}
+
+.home-page-header .header-section .header-content  .listen-now-btn{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    font-size: 1.5em;
+    border: #48333A;
+    background-color: #48333A;
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.51);
+    -webkit-animation: pulse 0.8s infinite cubic-bezier(0.66, 0, 0, 1);
+    -moz-animation: pulse 0.8s infinite cubic-bezier(0.66, 0, 0, 1);
+    -ms-animation: pulse 0.8s infinite cubic-bezier(0.66, 0, 0, 1);
+    animation: pulse 0.8s infinite cubic-bezier(0.66, 0, 0, 1);
+}
+
+@-webkit-keyframes pulse {to {box-shadow: 0 0 0 30px rgba(232, 76, 61, 0);}}
+@-moz-keyframes pulse {to {box-shadow: 0 0 0 30px rgba(232, 76, 61, 0);}}
+@-ms-keyframes pulse {to {box-shadow: 0 0 0 30px rgba(232, 76, 61, 0);}}
+@keyframes pulse {to {box-shadow: 0 0 0 30px rgba(232, 76, 61, 0);}}
+
+
+/*Modal Styling*/
+.login-modal .modal-body {
+    padding: 0 !important;
+    position: relative;
+
+}
+
+.login-modal .social-login {
+    width: 80%;
+    height: 80%;
+    overflow: auto;
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(128, 128, 128, 0.46);
+}
+
+.login-modal .social-login .facebook-button {
+    background-color: #5547B4;
+    border-color: #5547B4;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.67);
+}
+
+.login-modal .social-login .google-button {
+    background-color: red;
+    border-color: red;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.67);
+}
+
+
+
+
+
+
+
+
+
+
+
+

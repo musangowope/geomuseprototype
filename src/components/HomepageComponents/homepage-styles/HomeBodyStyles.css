@@ -1,0 +1,13 @@
+.home-body .what-is-section  .grid-container {
+    box-shadow: 2px 2px 66px black;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.home-body .what-is-section .grid-container .grid-item {
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+    float: left;
+    height: 200px;
+}
