@@ -4,6 +4,8 @@ import App from './App';
 import HomePage from './components/HomepageComponents/HomePage';
 import Callback from './Callback/Callback';
 import Geomuse from './components/GeomuseComponents/Geomuse'
+import Playlist from './components/GeomuseComponents/Playlist'
+
 
 import Auth from './Auth/Auth';
 import history from './history';
@@ -21,7 +23,8 @@ export const makeMainRoutes = () => {
             <div>
                 <Route path="/" exact={true} render={(props) => <App auth={auth} {...props} />} />
                 <Route path="/home" render={(props) => (<HomePage auth={auth} {...props} />)}/>
-                <Route path="/test" render={() => <Geomuse />} />
+                <Route path="/geomuse" render={(props) => (<Geomuse auth={auth} {...props} />)}/>
+                <Route path="/playlist" render={() => <Playlist />} />
                 <Route path="/callback" render={(props) => {
                     handleAuthentication(props);
                     return <Callback {...props} />

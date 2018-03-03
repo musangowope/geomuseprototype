@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import GoogleMapReact from 'google-map-react'
-import './geomuse-styles/geomuse.css'
+import './geomuse-styles/geomuse-map.css'
 import { Row, Col }  from 'reactstrap'
 
 import whatIsBg1 from '../../assets/images/home-page-assets/what-is-bg-1.jpeg'
@@ -46,6 +46,7 @@ export default class GeoMuseMap extends Component {
             <div className='geomuse-component'>
                 <div className="google-map">
                     <GoogleMapReact
+                        bootstrapURLKeys={{ key: ['AIzaSyCAUtLwwTiZHRsO4brpMT12q0pyKMp9hNs'] }}
                         defaultCenter={ this.props.center }
                         defaultZoom={ this.props.zoom }>
                         {thumbnailObjects.map(function (thumbnailObject, index) {
