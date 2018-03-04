@@ -1,0 +1,79 @@
+.playlist-component .container {
+    width: 400px;
+    margin: 0 auto;
+    -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
+    line-height: 0;
+}
+
+.playlist-component .display {
+    position: relative;
+    height: 0;
+    width: 100%;
+    padding-bottom: 50%;
+    padding-top: 25px;
+    overflow: hidden;
+}
+.display iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+}
+.display.hidden {
+    padding: 0;
+}
+
+.footer {
+    position: relative;
+    background: #FFF;
+}
+.playlist-component .footer .thumb {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    width: 140px;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.playlist-component .footer .bar {
+    background-color: #ddd;
+    width: 100%;
+    padding: 0 5px 0 160px;
+}
+.playlist-component .footer #progressBar {
+    height: 6px;
+    overflow: hidden;
+}
+.playlist-component .footer #progressBar div {
+    margin-top: 2px;
+    height: 2px;
+    width: 0;
+    background-color: #2c3e50;
+}
+.playlist-component .footer .controls {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+.playlist-component .footer .controls button {
+    display: block;
+    width: 50px;
+    height: 50px;
+    font-size: 15px;
+    color: #bbb;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+.footer .controls button:first-child {
+    border-right: 1px solid #EEE;
+}
+.footer .controls button:last-child {
+    border-left: 1px solid #EEE;
+}
