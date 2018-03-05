@@ -48,11 +48,17 @@ class Playlist extends Component {
                 <input type="text" onChange={this.state.updateSearchQuery}/>
                 {/*<button onClick={this.videoSearch}>Test Button</button>*/}
                 {this.state.renderRenderQuery.map(function (renderObject, index) {
+                    let audioSrc = "https://www.yt-download.org/@api/button/mp3/" + renderObject.id.videoId
                     return (
                     <div key={index}>
                         <img src={renderObject.snippet.thumbnails.default.url}  key={index} className="animated fadeIn"/>
-                        <iframe src="https://www.yt-download.org/@api/button/mp3/YouTube-Video-ID" width="100%" height="100px" scrolling="no" style="border:none;"></iframe>
+                        <iframe width="560" height="315" src={'https://www.youtube.com/embed/' + renderObject.id.videoId} frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+
+                        {/*< iframe width="300" height="24" src="http://www.youtube.com/embed/ygfXKbcW8wQ?rel=0&autohide=0&#8243" frameborder="0" allowfullscreen></iframe>*/}
                     </div>
+
+
+
                     )
                 })}
             </div>
