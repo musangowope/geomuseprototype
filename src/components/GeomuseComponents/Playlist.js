@@ -5,7 +5,6 @@ class Playlist extends Component {
     constructor(props) {
         super(props);
         this.state = {
-
             updateSearchQuery: (evt) => {
                 let searchQuery = evt.target.value
                 this.state.musicSearch(searchQuery)
@@ -23,21 +22,8 @@ class Playlist extends Component {
                         console.log('Error fetching and parsing data', error);
                     });
             },
-
             renderRenderQuery: []
-
-            // renderRenderQuery: (renderData) => {
-            //     renderData.map(function (renderObject, index) {
-            //         console.log(renderObject.thumbnails.default)
-            //         return (
-            //         <div>
-            //             <img src={renderObject.thumbnails.default}/>
-            //         </div>
-            //         )
-            //     })
-            // }
         }
-
     }
 
 

@@ -1,0 +1,31 @@
+.explore-music-component .explore-mini-tab-container {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: transparent;
+    height:100px;
+    width: 88vw;
+    display: flex;
+}
+
+
+.explore-music-component .explore-mini-tab-container .explore-mini-tab {
+    flex: 1;
+}
+
+.explore-music-component .explore-mini-tab-container .explore-mini-tab .explore-mini-tab-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.explore-music-component .explore-mini-tab-container .explore-mini-tab .explore-bg {
+    width: 100%;
+    float: left;
+    background-size: cover;
+    height: 100%;
+    background-position: center;
+    opacity: 0.7;
+}
+
