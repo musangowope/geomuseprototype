@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import './geomuse-styles/geomuse.css'
 import GeoMuseMap from './GeoMuseMap'
 import SideMenu from './SideMenu'
-import ExploreMusic from './ExploreMusic'
+import ActionMusic from './ActionMusic'
 
 
 export default class Geomuse extends Component {
@@ -30,7 +30,7 @@ export default class Geomuse extends Component {
             <div className='geomuse-component'>
                 <SideMenu userDetails={profile}  auth={this.props.auth}/>
                 <GeoMuseMap/>
-                <ExploreMusic/>
+                <ActionMusic/>
             </div>
         )
     }
