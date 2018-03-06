@@ -10,6 +10,7 @@ body {
   padding: 0;
 }
 
+
 .white-spacer {
   background-color: white;
   height: 1px;
@@ -40,6 +41,7 @@ body {
   color: black;
 }
 
+
 /*Font Sizes*/
 .font-large {
   font-size: -webkit-xxx-large;
@@ -53,4 +55,34 @@ body {
 .full-width {
   width: 100%;
 }
+
+
+/*Padding*/
+.padding-top {
+  padding-top: 10px;
+}
+.padding-bottom {
+  padding-bottom: 10px;
+}
+
+.padding-left {
+  padding-left: 10px;
+}
+
+.padding-right {
+  padding-right: 10px;
+}
+
+.padding-top-bottom {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.padding-sides {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+
+
 

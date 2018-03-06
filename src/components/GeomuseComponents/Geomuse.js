@@ -29,7 +29,7 @@ export default class Geomuse extends Component {
         return (
             <div className='geomuse-component'>
                 <SideMenu userDetails={profile}  auth={this.props.auth}/>
-                <GeoMuseMap/>
+                {/*<GeoMuseMap/>*/}
                 <ActionMusic/>
             </div>
         )
