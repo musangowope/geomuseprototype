@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import './App.css';
+import './global-styles/App.css';
+import './global-styles/padding.css'
 import './animate.css'
 import HomePage from './components/HomepageComponents/HomePage'
 

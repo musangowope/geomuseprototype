@@ -1,38 +1,61 @@
-.action-music-component .action-mini-tab-container {
-    position: absolute;
-    right: 35px;
-    top: 35px;
-    /*background-color: rgba(156, 110, 127, 0.71);*/
-    background-color: transparent;
-    height:100px;
-    /*width: 88vw;*/
-    /*margin:0;*/
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.action-music-component .action-mini-tab-container .action-item {
-    background-color: blue;
-    width: 125px;
-    height: 125px;
-    background-size: cover;
-    background-position: center;
-    border-radius: 50%;
-    /*box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.43);*/
+.action-music-component {
+    height: 100vh;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a90329+0,8f0222+44,6d0019+100;Brown+Red+3D */
+    /*background: #a90329; !* Old browsers *!*/
+    /*background: -moz-linear-gradient(top, #a90329 0%, #8f0222 44%, #6d0019 100%); !* FF3.6-15 *!*/
+    /*background: -webkit-linear-gradient(top, #a90329 0%,#8f0222 44%,#6d0019 100%); !* Chrome10-25,Safari5.1-6 *!*/
+    /*background: linear-gradient(to bottom, #a90329 0%,#8f0222 44%,#6d0019 100%); !* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ *!*/
+    /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019',GradientType=0 ); !* IE6-9 *!*/
     position: relative;
-    text-align: center;
-    margin: 5px;
-    border: 5px solid white;
-
 }
 
-.action-music-component .action-mini-tab-container .action-item .shadow-overlay {
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.action-music-component .action-music-items {
+    position: absolute;
+    width: 86vw;
+    right: 0;
+    /*background-color: white;*/
+}
 
+.action-music-component .action-music-items .action-item {
+    transition: 0.4s ease-in;
+    cursor: pointer;
+    position:relative;
+}
+
+.action-music-component .action-music-items .action-item:hover {
+    color: rgba(75, 51, 60, 0.78);
+}
+
+.action-music-component .action-music-items .action-item:hover .action-item-underline {
+    transition: 0.4s ease-in-out;
+    position:absolute;
+    width: 25%;
+    height: 3px;
+    background-color: #4B333C;
+    left:0;
+    right:0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.action-music-component .action-shadow-overlay {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.17+45,0.23+57,0.57+100 */
+    background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.17) 45%, rgba(0,0,0,0.23) 57%, rgba(0,0,0,0.57) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.17) 45%,rgba(0,0,0,0.23) 57%,rgba(0,0,0,0.57) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.17) 45%,rgba(0,0,0,0.23) 57%,rgba(0,0,0,0.57) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#91000000',GradientType=0 ); /* IE6-9 */
+    position: fixed;
+    width: 100vw;
+    height: 40vh;
+    bottom: 0;
+}
+
+.action-music-component .action-content {
+    width: 86vw;
+    position: absolute;
+    right:0;
+    top: 104px;
 }
 
 

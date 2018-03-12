@@ -1,0 +1,30 @@
+.explore-component .tag-input-group .tag-input, .explore-component .tag-input-group .search-tag {
+    line-height: 2.5;
+    border-radius: 3.3rem;
+}
+
+.explore-component .tag-input-group .search-tag {
+    background-color: rgba(75, 51, 60, 0.33);
+    border: 1px solid rgba(75, 51, 60, 0.33);
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.26);
+}
+
+
+
+.explore-component .common-selection-group .common-tag {
+    transition: 0.3s ease-in;
+    border: 1px solid rgba(75, 51, 60, 0.33);
+    border-radius: 3.3rem;
+    font-size: 1.25rem;
+    padding: 0.5rem 1rem;
+    /*line-height: 4.5;*/
+    width: auto;
+}
+
+.explore-component .common-selection-group .common-tag:hover {
+    color: white;
+    background-color: rgba(75, 51, 60, 0.33);
+    cursor: pointer;
+}

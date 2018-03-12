@@ -5,18 +5,14 @@
   font-family: 'Montserrat', sans-serif !important;
 }
 
+
 body {
   margin: 0;
   padding: 0;
 }
 
-
-.white-spacer {
-  background-color: white;
-  height: 1px;
-  width: 100%;
-  margin-top: 5px;
-  margin-bottom: 5px;
+hr.white-divider {
+  border-top: 1px solid white;
 }
 
 /*Help classes*/
@@ -38,7 +34,7 @@ body {
 
 
 .text-black {
-  color: black;
+  color: black !important;
 }
 
 
@@ -57,32 +53,12 @@ body {
 }
 
 
-/*Padding*/
-.padding-top {
-  padding-top: 10px;
-}
-.padding-bottom {
-  padding-bottom: 10px;
-}
 
-.padding-left {
-  padding-left: 10px;
-}
 
-.padding-right {
-  padding-right: 10px;
-}
+/*Font transformation*/
+.uppercase {
 
-.padding-top-bottom {
-  padding-top: 10px;
-  padding-bottom: 10px;
 }
-
-.padding-sides {
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
 
 
 

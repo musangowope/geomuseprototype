@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './geomuse-styles/geomuse-side-bar.css'
 import { Nav, NavItem, NavLink, Row, Col, Container } from 'reactstrap';
+import FaSearch from 'react-icons/lib/fa/search'
 
 
 
@@ -27,16 +28,27 @@ export default class SideMenu extends Component {
                                 <div className="text-white">
                                     Musango Wope
                                 </div>
-                                {/*<div className="text-white">Logout</div>*/}
                             </Col>
                         </Row>
                     </Container>
-
                 </Nav>
+
                 <Container>
-                    <div className="white-spacer"/>
+                    <hr className="white-divider"/>
                 </Container>
-                <Nav vertical className="geomenu-items">
+
+                <Nav vertical>
+                    <NavItem>
+                        <NavLink className="text-white" href="#">Search <FaSearch/></NavLink>
+                    </NavItem>
+                </Nav>
+
+
+                <Container>
+                    <hr className="white-divider"/>
+                </Container>
+
+                <Nav vertical>
                     <NavItem>
                         <NavLink className="text-white" href="#">Friends' Feed</NavLink>
                     </NavItem>
@@ -49,11 +61,11 @@ export default class SideMenu extends Component {
                 </Nav>
 
                 <Container>
-                    <div className="white-spacer"/>
+                    <hr className="white-divider"/>
                 </Container>
 
                 <Nav vertical>
-                    <NavItem className="padding-top-bottom">
+                    <NavItem>
                         <Container>
                             <p className="text-uppercase text-white">Recently Playlist</p>
                         </Container>
