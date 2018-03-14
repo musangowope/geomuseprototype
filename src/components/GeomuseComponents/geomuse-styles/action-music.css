@@ -49,6 +49,7 @@
     width: 100vw;
     height: 40vh;
     bottom: 0;
+    z-index: -1;
 }
 
 .action-music-component .action-content {
