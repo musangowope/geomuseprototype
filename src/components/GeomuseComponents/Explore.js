@@ -144,9 +144,10 @@ export default class Explore extends Component {
                     </Row>
 
 
-                    <Row className="text-center mt-5 mb-3 explore-img-group">
-                        <Col sm="auto">
-                            <div className="explore-img"></div>
+                    <Row className="text-center mt-5 mb-3 explore-img-group on-top">
+                        <Col lg="3">
+                            <div className="explore-img">
+                            </div>
                         </Col>
                     </Row>
 
