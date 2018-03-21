@@ -10,7 +10,16 @@
     padding: 0.5rem 1rem;
     font-size: 1.25rem;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.26);
+    -webkit-animation: tune-pulse 1.5s infinite cubic-bezier(0.66, 0, 0, 1);
+    -moz-animation: tune-pulse 1.5s infinite cubic-bezier(0.66, 0, 0, 1);
+    -ms-animation: tune-pulse 1.5s infinite cubic-bezier(0.66, 0, 0, 1);
+    animation: tune-pulse 1.5s infinite cubic-bezier(0.66, 0, 0, 1);
 }
+
+@-webkit-keyframes tune-pulse {to {box-shadow: 0 0 0 13px rgba(232, 76, 61, 0);}}
+@-moz-keyframes tune-pulse {to {box-shadow: 0 0 0 13px rgba(232, 76, 61, 0);}}
+@-ms-keyframes tune-pulse {to {box-shadow: 0 0 0 13px rgba(232, 76, 61, 0);}}
+@keyframes tune-pulse {to {box-shadow: 0 0 0 13px rgba(232, 76, 61, 0);}}
 
 .explore-component .tag-input-group .search-tag .close-tag-btn {
     display: none;
@@ -40,6 +49,7 @@
     padding: 0.5rem 1rem;
     /*line-height: 4.5;*/
     width: auto;
+
 }
 
 .explore-component .common-selection-group .common-tag:hover {
@@ -48,7 +58,51 @@
     cursor: pointer;
 }
 
+
 .explore-component .explore-img-group .explore-img {
-    background-color: red;
-    height:300px;
+    height:400px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 0.3s ease-in;
+    /*border-radius: 2.5em;*/
+    /*background-color: rgba(75, 51, 60, 0.78);*/
+    box-shadow: 2px 2px 20px rgba(75, 51, 60, 0.43);
+    /*border: solid 2px rgba(75, 51, 60, 0.43);*/
 }
+
+.explore-component .explore-img-group .explore-img .explore-shadow-gradient {
+    height: 100%;
+    background: -moz-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+    transition: 0.3s ease-in;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.explore-component .explore-img-group .explore-img .explore-shadow-gradient .play-container {
+    opacity: 0;
+    transition: 0.3s ease-in;
+}
+
+.explore-component .explore-img-group .explore-img .explore-shadow-gradient:hover {
+    background-color: rgba(75, 51, 60, 0.65);
+}
+
+.explore-component .explore-img-group .explore-img .explore-shadow-gradient:hover .play-container {
+    opacity: 1;
+}
+
+.explore-component .explore-img-group .explore-img .result-text {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+
+
+
