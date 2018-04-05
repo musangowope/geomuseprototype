@@ -17,15 +17,8 @@ export default class Geomuse extends Component {
             this.setState({ profile: userProfile });
         }
     }
-    goHome(route) {
-        this.props.history.replace(`/${route}`)
-    }
-
-
-
     render() {
         const { profile } = this.state
-        console.log(profile)
         return (
             <div className='geomuse-component'>
                 <SideMenu userDetails={profile}  auth={this.props.auth}/>

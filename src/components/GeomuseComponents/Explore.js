@@ -3,7 +3,8 @@ import './geomuse-styles/explore.css'
 import {Row, Col, Container, Label, Input } from 'reactstrap';
 import FaClose from 'react-icons/lib/fa/close'
 import axios from 'axios'
-import FaPlay from 'react-icons/lib/fa/play-circle-o'
+import FaPlay from 'react-icons/lib/fa/play'
+import FaLibrary from 'react-icons/lib/fa/bars'
 
 
 export default class Explore extends Component {
@@ -47,26 +48,22 @@ export default class Explore extends Component {
             console.log(e.target.value)
             let inputTag = e.target.value
             if(!this.state.searchTags.includes(inputTag)) {
-                this.setState(prevState => ({
-                    searchTags: [...this.state.searchTags, inputTag]
-                }));
-                this.exploreMusic()
+                this.setState({ searchTags: [...this.state.searchTags, inputTag] }, () => {
+                    this.exploreMusic()
+                });
             }
         }
 
     }
 
-
-
     addCommonTags = (commonTag) => (e) => {
         e.preventDefault
         if(!this.state.searchTags.includes(commonTag)) {
             console.log(commonTag)
-            this.setState(prevState => ({
-                searchTags: [...this.state.searchTags, commonTag]
-            }));
-            console.log(this.state.searchTags)
-            this.exploreMusic()
+            this.setState({ searchTags: [...this.state.searchTags, commonTag] }, () => {
+                console.log(this.state.searchTags)
+                this.exploreMusic()
+            });
         }
     }
 
@@ -76,9 +73,7 @@ export default class Explore extends Component {
         axios.get("https://api.jamendo.com/v3.0/tracks/?client_id=0c736982&format=jsonpretty&limit=8&fuzzytags="+ exploreTags +"&speed=high+veryhigh&include=musicinfo&groupby=artist_id&order=popularity_week")
             .then(response => {
                 console.log(response.data.results)
-                this.setState(prevState => ({
-                    searchResults: response.data.results
-                }));
+                this.setState({ searchResults: response.data.results });
             })
             .catch(error => {
                 console.log('Error fetching and parsing data', error);
@@ -160,7 +155,12 @@ export default class Explore extends Component {
                                 <div className="explore-img" style={{backgroundImage: 'url('+ searchResult.image +')'}}>
                                     <div className="explore-shadow-gradient">
                                         <div className="play-container">
-                                            <FaPlay width="150px" height="150px" className="text-white"/>
+                                            <div className="play-button-container">
+                                                <FaPlay width="40px" height="40px" className="text-white"/>
+                                            </div>
+                                            <div className="add-library-container">
+                                                <FaLibrary className="text-white"/>
+                                            </div>
                                         </div>
                                     </div>
                                     <div className="result-text">
