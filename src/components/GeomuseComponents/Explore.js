@@ -161,6 +161,16 @@ export default class Explore extends Component {
                                             <div className="add-library-container">
                                                 <FaLibrary className="text-white"/>
                                             </div>
+
+                                            <div className="genres-container">
+                                                <Row>
+                                                    <Col>
+
+                                                    </Col>
+                                                </Row>
+                                                <p className="text-white">lsdkjfdlskjf</p>
+                                            </div>
+
                                         </div>
                                     </div>
                                     <div className="result-text">

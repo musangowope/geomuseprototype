@@ -111,8 +111,15 @@
     height: 50px;
     width: 50px;
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 30px;
+}
+
+.explore-component .explore-img-group .explore-shadow-gradient .play-container .genres-container {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
 }
 
 .explore-component .explore-img-group .explore-img .explore-shadow-gradient:hover {
