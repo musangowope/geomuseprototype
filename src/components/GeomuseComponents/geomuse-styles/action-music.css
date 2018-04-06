@@ -13,29 +13,36 @@
     position: absolute;
     width: 86%;
     right: 0;
-    /*background-color: white;*/
+    /*background-color: rgba(0, 0, 0, 0.24);*/
 }
 
-.action-music-component .action-music-items .action-item {
+
+.action-music-component .action-music-items .action-item a {
     transition: 0.4s ease-in;
     cursor: pointer;
     position:relative;
 }
 
-.action-music-component .action-music-items .action-item:hover {
-    color: rgba(75, 51, 60, 0.78);
+.action-music-component .action-music-items .action-item a {
+    text-decoration:none;
+    color: #2C3E50;
+}
+
+.action-music-component .action-music-items .action-item:hover a {
+    color: rgba(75, 51, 60, 0.78) !important;
 }
 
 .action-music-component .action-music-items .action-item:hover .action-item-underline {
-    transition: 0.4s ease-in-out;
+    transition: 0.35s ease-in-out;
     position:absolute;
     width: 25%;
-    height: 3px;
+    height: 1px;
     background-color: #4B333C;
     left:0;
     right:0;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 5px;
 }
 
 
@@ -56,7 +63,6 @@
     width: 86%;
     position: absolute;
     right:0;
-    top: 104px;
 }
 
 

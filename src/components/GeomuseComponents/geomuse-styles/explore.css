@@ -1,3 +1,11 @@
+.explore-component .component-header {
+    padding-top: 104px;
+    background-color: rgba(0, 0, 0, 0.47);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    transition: 0.3s ease-in-out;
+}
 .explore-component .tag-input-group .tag-input, .explore-component .tag-input-group .search-tag {
     line-height: 2.5;
     border-radius: 3.3rem;
@@ -120,6 +128,12 @@
     position: absolute;
     bottom: 10px;
     left: 10px;
+}
+
+.explore-component .explore-img-group .explore-shadow-gradient .play-container .genres-container .genre-tag {
+    border:  1px solid white;
+    border-radius: 10px;
+    padding: 5px;
 }
 
 .explore-component .explore-img-group .explore-img .explore-shadow-gradient:hover {

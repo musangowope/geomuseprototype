@@ -38,7 +38,8 @@ export default class Explore extends Component {
                 "Sad",
             ],
             searchTags: [],
-            searchResults: []
+            searchResults: [],
+            headerBgImage: '',
         }
     }
 
@@ -72,8 +73,11 @@ export default class Explore extends Component {
         console.log(exploreTags.toString())
         axios.get("https://api.jamendo.com/v3.0/tracks/?client_id=0c736982&format=jsonpretty&limit=8&fuzzytags="+ exploreTags +"&speed=high+veryhigh&include=musicinfo&groupby=artist_id&order=popularity_week")
             .then(response => {
-                console.log(response.data.results)
-                this.setState({ searchResults: response.data.results });
+                console.log('Result data', response.data.results)
+                this.setState({
+                    searchResults: response.data.results,
+                    headerBgImage: response.data.results[0].image
+                });
             })
             .catch(error => {
                 console.log('Error fetching and parsing data', error);
@@ -100,34 +104,36 @@ export default class Explore extends Component {
     }
 
 
-
     render() {
         return (
-            <div className='explore-component padding-top-bottom-big'>
-                <Container>
-                    <Row className="text-center">
-                        <Col>
-                            <h4>Explore and Discover New Music</h4>
-                        </Col>
-                    </Row>
-                    <Row className="mt-4 tag-input-group">
-                        <Col lg="4">
-                            <Input className="tag-input mb-3" onKeyPress={this.searchTagInputHandle} placeholder="Artist, activity, genre or mood" bsSize="lg" />
-                        </Col>
-                        {this.state.searchTags.map((searchTag, index) => (
-                            <Col lg="auto animated fadeInLeft mb-3" key={index}>
-                                <div className="search-tag on-top">
-                                    <span className="text-white">#{searchTag}</span>
-                                    <div className="close-tag-btn animated fadeIn" onClick={this.removeSearchTag(searchTag)}>
-                                        <FaClose/>
-                                    </div>
-                                </div>
+            <div className='explore-component'>
+                <div className="component-header" style={{backgroundImage: 'url('+ this.state.headerBgImage +')'}}>
+                    <Container>
+                        <Row className="text-center mt-5">
+                            <Col>
+                                <h4 className="text-white">Explore and Discover New Music</h4>
                             </Col>
-                        ))}
+                        </Row>
+                        <Row className="mt-4 tag-input-group">
+                            <Col lg="4">
+                                <Input className="tag-input mb-3" onKeyPress={this.searchTagInputHandle} placeholder="Artist, activity, genre or mood" bsSize="lg" />
+                            </Col>
+                            {this.state.searchTags.map((searchTag, index) => (
+                                <Col lg="auto animated fadeInLeft mb-3" key={index}>
+                                    <div className="search-tag on-top">
+                                        <span className="text-white">#{searchTag}</span>
+                                        <div className="close-tag-btn animated fadeIn" onClick={this.removeSearchTag(searchTag)}>
+                                            <FaClose/>
+                                        </div>
+                                    </div>
+                                </Col>
+                            ))}
+                        </Row>
+                    </Container>
+                </div>
 
 
-                    </Row>
-
+                <Container>
                     <Row className="text-center mt-5 mb-3">
                         <Col>
                             <h4>Common Tags</h4>
@@ -147,9 +153,7 @@ export default class Explore extends Component {
                         )}
                     </Row>
 
-
                     <Row className="mt-5 mb-3 explore-img-group on-top">
-
                         {this.state.searchResults.map((searchResult, index) => (
                             <Col lg="4" className="mb-3 animated fadeIn" key={index}>
                                 <div className="explore-img" style={{backgroundImage: 'url('+ searchResult.image +')'}}>
@@ -164,11 +168,14 @@ export default class Explore extends Component {
 
                                             <div className="genres-container">
                                                 <Row>
-                                                    <Col>
-
-                                                    </Col>
+                                                    {searchResult.musicinfo.tags.genres.map((genreTag, index) => (
+                                                        <Col lg="auto" key={index} className="mb-2">
+                                                            <div className="genre-tag text-white">
+                                                                {genreTag}
+                                                            </div>
+                                                        </Col>
+                                                    ))}
                                                 </Row>
-                                                <p className="text-white">lsdkjfdlskjf</p>
                                             </div>
 
                                         </div>

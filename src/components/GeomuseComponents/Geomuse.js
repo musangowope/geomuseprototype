@@ -4,7 +4,6 @@ import GeoMuseMap from './GeoMuseMap'
 import SideMenu from './SideMenu'
 import ActionMusic from './ActionMusic'
 
-
 export default class Geomuse extends Component {
     componentWillMount() {
         this.setState({ profile: {} });
@@ -18,12 +17,13 @@ export default class Geomuse extends Component {
         }
     }
     render() {
+        console.log(this.props.match.path);
         const { profile } = this.state
         return (
             <div className='geomuse-component'>
                 <SideMenu userDetails={profile}  auth={this.props.auth}/>
                 {/*<GeoMuseMap/>*/}
-                <ActionMusic/>
+                <ActionMusic routeURL = {this.props.match.path}/>
             </div>
         )
     }

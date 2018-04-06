@@ -1,14 +1,11 @@
 import React, { Component } from 'react'
 import './geomuse-styles/action-music.css'
 import {Container, Row, Col} from 'reactstrap'
+
+import { Route, Link } from 'react-router-dom';
+import YourTaste from './YourTaste'
 import Explore from './Explore'
-
-import axios from 'axios'
-
-import exploreBg from '../../../src/assets/images/geomuse-assets/explor-bg.jpeg'
-import searchBg from '../../../src/assets/images/geomuse-assets/search-bg.jpeg'
-import playlistBg from '../../../src/assets/images/geomuse-assets/create-playlist-bg.jpg'
-
+import TrendingPlaylists from './TrendingPlaylists'
 
 export default class ActionMusic extends Component {
     constructor(props) {
@@ -20,27 +17,55 @@ export default class ActionMusic extends Component {
     render() {
         return (
             <div className='action-music-component'>
-                <div className="action-music-items padding-top-bottom-big">
+                <div className="action-music-items padding-top-bottom-big on-top">
                     <Container>
                         <Row className="text-center">
                             <Col className="text-uppercase action-item">
-                                <a><strong>Explore</strong></a>
+                                <Link to="/geomuse" className="font-smaller">
+                                    <strong className="text-white">
+                                        Your Taste
+                                    </strong>
+                                </Link>
                                 <div className="action-item-underline"/>
                             </Col>
                             <Col className="text-uppercase action-item">
-                                <a><strong>Trending Playlist</strong></a>
+                                <Link to="/geomuse/explore" className="font-smaller">
+                                    <strong className="text-white">
+                                        Explore
+                                    </strong>
+                                </Link>
                                 <div className="action-item-underline"/>
                             </Col>
                             <Col className="text-uppercase action-item">
-                                <a><strong>Featured Artists</strong></a>
+                                <Link to="/geomuse/trending-playlists" className="font-smaller">
+                                    <strong className="text-white">
+                                        Trending Playlists
+                                    </strong>
+                                </Link>
                                 <div className="action-item-underline"/>
                             </Col>
                             <Col className="text-uppercase action-item">
-                                <a><strong>Geomuse Map</strong></a>
+                                <a className="font-smaller">
+                                    <strong className="text-white">
+                                        Featured Artists
+                                    </strong>
+                                </a>
                                 <div className="action-item-underline"/>
                             </Col>
                             <Col className="text-uppercase action-item">
-                                <a><strong>Create Playlist</strong></a>
+                                <a className="font-smaller">
+                                    <strong className="text-white">
+                                        Geomuse Map
+                                    </strong>
+                                </a>
+                                <div className="action-item-underline"/>
+                            </Col>
+                            <Col className="text-uppercase action-item">
+                                <a className="font-smaller">
+                                    <strong className="text-white">
+                                        Create Playlist
+                                    </strong>
+                                </a>
                                 <div className="action-item-underline"/>
                             </Col>
                         </Row>
@@ -48,7 +73,9 @@ export default class ActionMusic extends Component {
                 </div>
 
                 <div className="action-content">
-                    <Explore/>
+                    <Route exact path={this.props.routeURL} component={YourTaste} />
+                    <Route path={`${this.props.routeURL}/explore`} component={Explore} />
+                    <Route path={`${this.props.routeURL}/trending-playlists`} component={TrendingPlaylists} />
                 </div>
 
 

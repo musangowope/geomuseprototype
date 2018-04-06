@@ -43,6 +43,9 @@ hr.white-divider {
   font-size: -webkit-xxx-large;
 }
 
+.font-smaller {
+  font-size: smaller;
+}
 
 .font-light {
   font-weight: 100;
