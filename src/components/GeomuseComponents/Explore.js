@@ -39,7 +39,10 @@ export default class Explore extends Component {
             ],
             searchTags: [],
             searchResults: [],
-            headerBgImage: '',
+            headerBgImage1: '',
+            headerBgImage2: '',
+            headerBgImage3: '',
+            headerBgImage4: '',
         }
     }
 
@@ -76,7 +79,10 @@ export default class Explore extends Component {
                 console.log('Result data', response.data.results)
                 this.setState({
                     searchResults: response.data.results,
-                    headerBgImage: response.data.results[0].image
+                    headerBgImage1: response.data.results[0].image,
+                    headerBgImage2: response.data.results[1].image,
+                    headerBgImage3: response.data.results[2].image,
+                    headerBgImage4: response.data.results[3].image
                 });
             })
             .catch(error => {
@@ -107,7 +113,13 @@ export default class Explore extends Component {
     render() {
         return (
             <div className='explore-component'>
-                <div className="component-header" style={{backgroundImage: 'url('+ this.state.headerBgImage +')'}}>
+                <div className="component-header">
+                    <div className="bg-segment-container">
+                        <div className="bg-segment" style={{backgroundImage: 'url('+ this.state.headerBgImage1 +')'}}></div>
+                        <div className="bg-segment" style={{backgroundImage: 'url('+ this.state.headerBgImage2 +')'}}></div>
+                        <div className="bg-segment" style={{backgroundImage: 'url('+ this.state.headerBgImage3 +')'}}></div>
+                        <div className="bg-segment" style={{backgroundImage: 'url('+ this.state.headerBgImage4 +')'}}></div>
+                    </div>
                     <Container>
                         <Row className="text-center mt-5">
                             <Col>
