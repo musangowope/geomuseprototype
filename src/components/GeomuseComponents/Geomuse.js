@@ -3,6 +3,7 @@ import './geomuse-styles/geomuse.css'
 import GeoMuseMap from './GeoMuseMap'
 import SideMenu from './SideMenu'
 import ActionMusic from './ActionMusic'
+import Player from './Player'
 
 export default class Geomuse extends Component {
     componentWillMount() {
@@ -24,6 +25,7 @@ export default class Geomuse extends Component {
                 <SideMenu userDetails={profile}  auth={this.props.auth}/>
                 {/*<GeoMuseMap/>*/}
                 <ActionMusic routeURL = {this.props.match.path}/>
+                <Player />
             </div>
         )
     }

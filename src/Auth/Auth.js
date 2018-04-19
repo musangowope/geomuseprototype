@@ -70,7 +70,7 @@ export default class Auth {
     this.auth0.parseHash((err, authResult) => {
       if (authResult && authResult.accessToken && authResult.idToken) {
         this.setSession(authResult);
-        history.replace('/geomusez');
+        history.replace('/geomuse');
       } else if (err) {
         history.replace('/geomuse');
         console.log(err);

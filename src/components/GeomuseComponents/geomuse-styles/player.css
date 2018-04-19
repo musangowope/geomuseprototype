@@ -1,0 +1,38 @@
+.player-component {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    height: 100px;
+    width: 100%;
+    background-color: #998089;
+    z-index: 9999;
+}
+
+
+
+.player-component .player-component-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width:100%;
+}
+
+.player-component .player-component-container .player-action-container {
+    position: absolute;
+    height: 80px;
+    top: 10px;
+    left: 10px;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.player-component .player-component-container .gauge-container {
+    height: 80px;
+    width: 50%;
+    background-color: #715E65;
+    border-radius: 50px;
+}
